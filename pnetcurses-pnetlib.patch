@@ -1,0 +1,26 @@
+--- pnetcurses-0.0.2/configure.in.orig	2003-01-11 04:36:51.000000000 +0100
++++ pnetcurses-0.0.2/configure.in	2014-12-14 18:29:21.517240190 +0100
+@@ -139,8 +139,8 @@
+ 	echo '**************************************************************'
+ 	exit 1
+ fi
+-if test -f "$PNETLIB_PATH/runtime/mscorlib.dll" ; then
+-	CORLIB_PATH="$PNETLIB_PATH/runtime"
++if test -f "$PNETLIB_PATH/mscorlib.dll" ; then
++	CORLIB_PATH="$PNETLIB_PATH"
+ else
+ 	echo '**************************************************************'
+ 	echo "pnetlib's mscorlib.dll is required to run the example programs."
+--- pnetcurses-0.0.2/tools/csccflags.sh.orig	2002-12-08 06:55:28.000000000 +0100
++++ pnetcurses-0.0.2/tools/csccflags.sh	2014-12-14 18:29:38.460572813 +0100
+@@ -67,8 +67,8 @@
+ fi
+ 
+ # Locate "mscorlib" and add its path to the command-line options.
+-if test -f "$PNETLIB_DIR/runtime/mscorlib.dll" ; then
+-	FLAGS="$FLAGS -L \"$PNETLIB_DIR/runtime\""
++if test -f "$PNETLIB_DIR/mscorlib.dll" ; then
++	FLAGS="$FLAGS -L \"$PNETLIB_DIR\""
+ fi
+ 
+ # Output the flags to stdout and exit.
