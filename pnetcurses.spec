@@ -15,10 +15,10 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 # required tools: cscc [pnet-]resgen ilrun
-BuildRequires:	pnet-compiler-csharp >= %{pnet_version}
-BuildRequires:	pnet-interpreter >= %{pnet_version}
-BuildRequires:	pnetlib-base >= %{pnet_version}
-Requires:	pnetlib-base >= %{pnet_version}
+BuildRequires:	pnet-compiler-csharp >= %{pnet_ver}
+BuildRequires:	pnet-interpreter >= %{pnet_ver}
+BuildRequires:	pnetlib-base >= %{pnet_ver}
+Requires:	pnetlib-base >= %{pnet_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
